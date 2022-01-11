@@ -16,4 +16,14 @@ public class CabInvoiceGenerator {
         }
         return totalFare;
     }
+
+    public double calculateFareForMultiple_Ride(Ride[] rides) {
+        double totalFare = 0;
+        for(int i = 0; i < rides.length; i++) {
+            Ride ride = rides[i];
+            double fare = ride.getDistance() * COSTPerKM + ride.getTime() * COSTPerMIN;
+            totalFare += fare;
+        }
+        return totalFare;
+    }
 }

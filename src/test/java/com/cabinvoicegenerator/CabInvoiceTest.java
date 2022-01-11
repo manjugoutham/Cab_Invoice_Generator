@@ -22,4 +22,5 @@ public class CabInvoiceTest {
         double result = invoiceGenerator.calculateFare(distance,time);
         Assertions.assertEquals(5.0,result,0.0);
     }
+
 }
