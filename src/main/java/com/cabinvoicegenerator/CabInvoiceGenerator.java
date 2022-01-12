@@ -7,7 +7,6 @@ public class CabInvoiceGenerator {
     public static final double MIN_FARE = 5;
 
     // UC-1 method to check the total fare for the journey
-    // Checking pull request
 
     public double calculateFare(double distance, int time) {
         double totalFare = (distance * COSTPerKM) + (time * COSTPerMIN);
@@ -17,6 +16,7 @@ public class CabInvoiceGenerator {
         return totalFare;
     }
 
+    // UC-2 method to check the total fare for the multiple journey
     public double calculateFareForMultiple_Ride(Ride[] rides) {
         double totalFare = 0;
         for(int i = 0; i < rides.length; i++) {
