@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.cabinvoicegenerator.CabInvoiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-12T06:36:54" hostname="DESKTOP-5OHQGJ2" time="0.033">
+<testsuite name="com.cabinvoicegenerator.CabInvoiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-01-12T11:13:54" hostname="Srinaths-MacBook-Air.local" time="0.064">
   <properties/>
-  <testcase name="givenUserID_ShouldReturnInvoiceData()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.033"/>
+  <testcase name="givenMultipleRide_PremiumData_ShouldReturnFare()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.032"/>
+  <testcase name="givenUserID_ShouldReturnInvoiceData()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.003"/>
+  <testcase name="givenDistanceAndTime_PremiumData_ShouldReturnMinFare()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.003"/>
+  <testcase name="givenDistanceAndTime_ShouldReturnMinFare()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.002"/>
+  <testcase name="givenDistanceAndTime_PremiumData_ShouldReturnFare()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.003"/>
+  <testcase name="givenDistanceAndTime_ShouldReturnFare()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.003"/>
+  <testcase name="givenUserID_PremiumData_ShouldReturnInvoiceData()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.002"/>
+  <testcase name="givenMultipleRide_ShouldReturnFare()" classname="com.cabinvoicegenerator.CabInvoiceTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
