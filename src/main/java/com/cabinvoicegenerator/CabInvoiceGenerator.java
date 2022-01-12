@@ -17,6 +17,7 @@ public class CabInvoiceGenerator {
     }
 
     // UC-2 method to check the total fare for the multiple journey
+
     public double calculateFareForMultiple_Ride(Ride[] rides) {
         double totalFare = 0;
         for(int i = 0; i < rides.length; i++) {
