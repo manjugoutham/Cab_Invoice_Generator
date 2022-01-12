@@ -16,15 +16,19 @@ public class CabInvoiceGenerator {
         return totalFare;
     }
 
-    // UC-2 method to check the total fare for the multiple journey
+    // UC-3 method to check the Enhanced Invoice
 
-    public double calculateFareForMultiple_Ride(Ride[] rides) {
+    public CabInvoiceData calculateFareForMultiple_Ride(Ride[] rides) {
         double totalFare = 0;
-        for(int i = 0; i < rides.length; i++) {
+        double avgFarePerRide = 0;
+        for (int i = 0; i < rides.length; i++) {
             Ride ride = rides[i];
             double fare = ride.getDistance() * COSTPerKM + ride.getTime() * COSTPerMIN;
             totalFare += fare;
+            avgFarePerRide = totalFare / rides.length;
         }
-        return totalFare;
+        return new CabInvoiceData(rides.length, totalFare, avgFarePerRide);
     }
+
+
 }

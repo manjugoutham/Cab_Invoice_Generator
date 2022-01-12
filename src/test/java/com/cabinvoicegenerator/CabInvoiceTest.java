@@ -23,14 +23,15 @@ public class CabInvoiceTest {
         Assertions.assertEquals(5.0,result,0.0);
     }
 
-    // UC-2 test method check the multiple ride data
+    // UC-3 test method check the Enhanced Invoice
     @Test
     public void givenMultipleRide_ShouldReturnFare() {
         Ride[] rides = {
                 new Ride(2.0,5),
                 new Ride(1.0,1)
         };
-        double result = invoiceGenerator.calculateFareForMultiple_Ride(rides);
-        Assertions.assertEquals(36.0,result,0.0);
+        CabInvoiceData result = invoiceGenerator.calculateFareForMultiple_Ride(rides);
+        CabInvoiceData expectedData = new CabInvoiceData(2,36.0,18.0);
+        Assertions.assertEquals(result,expectedData);
     }
 }
