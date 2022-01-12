@@ -1,16 +1,13 @@
 package com.cabinvoicegenerator;
-
-
 public class CabInvoiceData {
 
     int totalNumberOfRide;
     double totalFare;
     double avgFarePerRide;
 
-    public CabInvoiceData(int totalNumberOfRide, double totalFare, double avgFarePerRide) {
+    public CabInvoiceData(int totalNumberOfRide, double totalFare) {
         this.totalNumberOfRide = totalNumberOfRide;
         this.totalFare = totalFare;
-        this.avgFarePerRide = avgFarePerRide;
     }
 
     @Override
@@ -24,4 +21,8 @@ public class CabInvoiceData {
         return totalNumberOfRide == other.totalNumberOfRide && Double.compare(other.totalFare, totalFare) == 0 && Double.compare(other.avgFarePerRide, avgFarePerRide) == 0;
     }
 
+    public CabInvoiceData getInvoiceData() {
+        this.avgFarePerRide = this.totalFare / this.totalNumberOfRide;
+        return this;
+    }
 }
